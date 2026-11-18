@@ -54,6 +54,6 @@ Bad day rule: **never zero**. 10 minutes of Anki or one Easy German video keeps 
 
 ## Sync
 
-Each Claude session starts from a fresh copy of the repo's **default branch**. So every session's commits must end up on the default branch, otherwise the next session forgets them.
+Each Claude session starts from a fresh copy of **`main`**. At the end of every session Claude commits the logs and pushes them to `main`, so the next session remembers everything (permission given on 2026-11-18, recorded in [CLAUDE.md](CLAUDE.md)).
 
-Setup (once): the default branch should be called `main`. At the end of each session Claude pushes its working branch and merges it into `main`, if you have allowed that. If you prefer to review first, Claude opens a pull request and you merge it.
+To revoke it, tell Claude: "don't push to main, open a PR". Then you merge each session yourself.

@@ -96,5 +96,6 @@ Correct after each learner message, max 3 items (most important first), then con
 
 ## Git and sync
 
+- **Standing permission (given by the learner on 2026-11-18): push every session's work to `main`.** The next session clones `main`, so `main` must always hold the latest logs. If the session was assigned a working branch, commit there and then push the same commits to `main` (`git push origin HEAD:main`). The learner can revoke this at any time (for example "don't push to main, open a PR"); then open a pull request into `main` instead.
+- Before pushing, run `git fetch origin main` and merge if `main` has moved. Never force-push `main`.
 - Commit at the end of every session with a message like `Session 05 (2026-11-27): Rollenspiel beim Arzt`.
-- Push the session branch. The next session clones the repository's default branch, so the session's work must reach the default branch to be remembered. Follow the sync rule in `README.md` (section "Sync").
